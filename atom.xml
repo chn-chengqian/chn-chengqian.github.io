@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-28T08:34:30.788Z</updated>
+  <updated>2016-10-28T08:37:18.670Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/03/18/HTTP%E5%8D%8F%E8%AE%AE/"/>
     <id>http://yoursite.com/2016/03/18/HTTP协议/</id>
     <published>2016-03-18T06:10:17.000Z</published>
-    <updated>2016-10-28T08:34:30.788Z</updated>
+    <updated>2016-10-28T08:37:18.670Z</updated>
     
     <content type="html"><![CDATA[<h2 id="HTTP概述"><a href="#HTTP概述" class="headerlink" title="HTTP概述"></a>HTTP概述</h2><h3 id="OSI、TCP-IP、HTTP"><a href="#OSI、TCP-IP、HTTP" class="headerlink" title="OSI、TCP/IP、HTTP"></a>OSI、TCP/IP、HTTP</h3><p><strong>开放系统互连参考模型 (Open System Interconnect 简称 OSI）</strong>是国际标准化组织(ISO)和国际电报电话咨询委员会(CCITT)联合制定的开放系统互连参考模型，为开放式互连信息系统提供了一种功能结构的框架。它从低到高分别是：物理层、数据链路层、<strong>网络层</strong>、<strong>传输层</strong>、会话层、表示层和<strong>应用层</strong>。</p>
 <p><strong>Transmission Control Protocol/Internet Protocol</strong>的简写，中译名为<strong>传输控制协议/因特网互联协议</strong>，又名<strong>网络通讯协议</strong>，是 Internet 最基本的协议、Internet 国际互联网络的基础，由 OSI 七层模型中<strong>传输层的 TCP 协议</strong>和<strong>网络层的 IP 协议</strong>组成。TCP/IP 定义了电子设备如何连入因特网，以及数据如何在它们之间传输的标准。协议采用了4层的层级结构，每一层都呼叫它的下一层所提供的协议来完成自己的需求。通俗而言：TCP 负责发现传输的问题，一有问题就发出信号，要求重新传输，直到所有数据安全正确地传输到目的地。而IP是给因特网的每一台联网设备规定一个地址。</p>
@@ -77,6 +77,8 @@
     
     </summary>
     
+    
+      <category term="HTTP" scheme="http://yoursite.com/tags/HTTP/"/>
     
   </entry>
   
