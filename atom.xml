@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-28T11:38:14.279Z</updated>
+  <updated>2016-10-28T12:11:42.544Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>JavaScript</title>
-    <link href="http://yoursite.com/2016/05/23/note_js/"/>
-    <id>http://yoursite.com/2016/05/23/note_js/</id>
-    <published>2016-05-23T04:10:17.000Z</published>
-    <updated>2016-10-28T11:38:14.279Z</updated>
+    <link href="http://yoursite.com/2016/10/28/note_js/"/>
+    <id>http://yoursite.com/2016/10/28/note_js/</id>
+    <published>2016-10-28T08:50:21.644Z</published>
+    <updated>2016-10-28T12:11:42.544Z</updated>
     
     <content type="html"><![CDATA[<h2 id="编写可维护的JavaScript代码"><a href="#编写可维护的JavaScript代码" class="headerlink" title="编写可维护的JavaScript代码"></a>编写可维护的JavaScript代码</h2><h2 id="变量、作用域、和内存"><a href="#变量、作用域、和内存" class="headerlink" title="变量、作用域、和内存"></a>变量、作用域、和内存</h2><p>由于javaScript的变量是松散类型的，所以javaScript里的变量只是特定时间保存特定值的一个名字而已、不存在定义某个变量就必须要保存某种数据类型值的规则，变量的值及其数据类型可以在脚本的生命周期内改变。<br><a id="more"></a></p>
 <h3 id="基本类型和引用数据类型的值"><a href="#基本类型和引用数据类型的值" class="headerlink" title="基本类型和引用数据类型的值"></a>基本类型和引用数据类型的值</h3><p>JavaScript中有两种数据类型：基本数据类型和引用数据类型。在将一个值赋给一个变量时解析器必须知道这个值是基本数据类型还是引用数据类型。那么基本数据类型指的其实就是简单的数据段，而引用数据类型指的是由多个值构成的对象。</p>
@@ -59,17 +59,19 @@
     
     </summary>
     
+      <category term="JavaScript" scheme="http://yoursite.com/categories/JavaScript/"/>
+    
     
       <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
-    <title>HTTP 协议</title>
-    <link href="http://yoursite.com/2016/03/18/HTTP%E5%8D%8F%E8%AE%AE/"/>
-    <id>http://yoursite.com/2016/03/18/HTTP协议/</id>
-    <published>2016-03-18T06:10:17.000Z</published>
-    <updated>2016-10-28T11:38:06.403Z</updated>
+    <title>HTTP 权威指南</title>
+    <link href="http://yoursite.com/2016/09/24/HTTP%E5%8D%8F%E8%AE%AE/"/>
+    <id>http://yoursite.com/2016/09/24/HTTP协议/</id>
+    <published>2016-09-24T13:25:10.586Z</published>
+    <updated>2016-10-28T12:12:37.031Z</updated>
     
     <content type="html"><![CDATA[<h2 id="HTTP概述"><a href="#HTTP概述" class="headerlink" title="HTTP概述"></a>HTTP概述</h2><h3 id="OSI、TCP-IP、HTTP"><a href="#OSI、TCP-IP、HTTP" class="headerlink" title="OSI、TCP/IP、HTTP"></a>OSI、TCP/IP、HTTP</h3><p><strong>开放系统互连参考模型 (Open System Interconnect 简称 OSI）</strong>是国际标准化组织(ISO)和国际电报电话咨询委员会(CCITT)联合制定的开放系统互连参考模型，为开放式互连信息系统提供了一种功能结构的框架。它从低到高分别是：物理层、数据链路层、<strong>网络层</strong>、<strong>传输层</strong>、会话层、表示层和<strong>应用层</strong>。</p>
 <p><strong>Transmission Control Protocol/Internet Protocol</strong>的简写，中译名为<strong>传输控制协议/因特网互联协议</strong>，又名<strong>网络通讯协议</strong>，是 Internet 最基本的协议、Internet 国际互联网络的基础，由 OSI 七层模型中<strong>传输层的 TCP 协议</strong>和<strong>网络层的 IP 协议</strong>组成。TCP/IP 定义了电子设备如何连入因特网，以及数据如何在它们之间传输的标准。协议采用了4层的层级结构，每一层都呼叫它的下一层所提供的协议来完成自己的需求。通俗而言：TCP 负责发现传输的问题，一有问题就发出信号，要求重新传输，直到所有数据安全正确地传输到目的地。而IP是给因特网的每一台联网设备规定一个地址。</p>
@@ -125,6 +127,8 @@
 &lt;p&gt;IP 代表网际协议，TCP 使用该协议从一个网络传送数据包到另一个网络。把 IP 想像成一种高速公路，它允许其它协议在上面行驶并找到到其它电脑的出口。TCP 是高速公路上的“卡车”，它们携带的货物就是像 HTTP这样的协议。&lt;br&gt;
     
     </summary>
+    
+      <category term="HTTP" scheme="http://yoursite.com/categories/HTTP/"/>
     
     
       <category term="HTTP" scheme="http://yoursite.com/tags/HTTP/"/>
