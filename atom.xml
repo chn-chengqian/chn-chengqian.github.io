@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-30T10:48:31.334Z</updated>
+  <updated>2016-10-28T12:11:42.544Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,26 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2016/10/30/about/"/>
-    <id>http://yoursite.com/2016/10/30/about/</id>
-    <published>2016-10-30T10:46:59.403Z</published>
-    <updated>2016-10-30T10:48:31.334Z</updated>
-    
-    <content type="html"><![CDATA[<p>人生就像骑单车。想保持平衡就得往前走。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;人生就像骑单车。想保持平衡就得往前走。&lt;/p&gt;
-
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>JavaScript</title>
