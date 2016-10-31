@@ -1,0 +1,922 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Java," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="跟任何编程语言一样，Java 语言拥有自己的结构、语法规则和编程范例。Java 语言的编程范例基于面向对象编程 (OOP) 的概念。Java 语言是 C 语言的一种衍生语言，所以它的语法规则与 C 语言的语法规则非常相似。例如，方法使代码模块化并使用花括号（{ 和 }）分隔，变量需要在使用之前声明。在结构上，Java 语言以包 作为开头。包是 Java 语言的命名空间机制。包中包含类，而类中包含方">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java 知识点总结">
+<meta property="og:url" content="http://yoursite.com/2016/10/31/JavaSE 知识点总结/index.html">
+<meta property="og:site_name" content="心梦无痕">
+<meta property="og:description" content="跟任何编程语言一样，Java 语言拥有自己的结构、语法规则和编程范例。Java 语言的编程范例基于面向对象编程 (OOP) 的概念。Java 语言是 C 语言的一种衍生语言，所以它的语法规则与 C 语言的语法规则非常相似。例如，方法使代码模块化并使用花括号（{ 和 }）分隔，变量需要在使用之前声明。在结构上，Java 语言以包 作为开头。包是 Java 语言的命名空间机制。包中包含类，而类中包含方">
+<meta property="og:image" content="http://i.imgur.com/eilgeWO.png">
+<meta property="og:image" content="http://i.imgur.com/1f3uuYN.png">
+<meta property="og:image" content="http://i.imgur.com/SQzzZa0.png">
+<meta property="og:image" content="http://i.imgur.com/jDYJo0a.png">
+<meta property="og:image" content="http://i.imgur.com/nf4fhms.png">
+<meta property="og:image" content="http://i.imgur.com/Ii3KCr2.png">
+<meta property="og:image" content="http://i.imgur.com/HxQytZm.png">
+<meta property="og:image" content="http://i.imgur.com/iC3MXwg.png">
+<meta property="og:image" content="http://i.imgur.com/oWsaixl.png">
+<meta property="og:image" content="http://i.imgur.com/JbLNunh.png">
+<meta property="og:updated_time" content="2016-10-31T07:31:48.161Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java 知识点总结">
+<meta name="twitter:description" content="跟任何编程语言一样，Java 语言拥有自己的结构、语法规则和编程范例。Java 语言的编程范例基于面向对象编程 (OOP) 的概念。Java 语言是 C 语言的一种衍生语言，所以它的语法规则与 C 语言的语法规则非常相似。例如，方法使代码模块化并使用花括号（{ 和 }）分隔，变量需要在使用之前声明。在结构上，Java 语言以包 作为开头。包是 Java 语言的命名空间机制。包中包含类，而类中包含方">
+<meta name="twitter:image" content="http://i.imgur.com/eilgeWO.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '6346460434496751000',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/10/31/JavaSE 知识点总结/"/>
+
+
+  <title> Java 知识点总结 | 心梦无痕 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">心梦无痕</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">chn-chengqian</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Java 知识点总结
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-31T08:56:08+08:00" content="2016-10-31">
+              2016-10-31
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/31/JavaSE 知识点总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/31/JavaSE 知识点总结/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/10/31/JavaSE 知识点总结/" class="leancloud_visitors" data-flag-title="Java 知识点总结">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>跟任何编程语言一样，Java 语言拥有自己的结构、语法规则和编程范例。Java 语言的编程范例基于面向对象编程 (OOP) 的概念。Java 语言是 C 语言的一种衍生语言，所以它的语法规则与 C 语言的语法规则非常相似。例如，方法使代码模块化并使用花括号（{ 和 }）分隔，变量需要在使用之前声明。在结构上，Java 语言以包 作为开头。包是 Java 语言的命名空间机制。包中包含类，而类中包含方法、变量、常量等。<br><a id="more"></a></p>
+<h2 id="Java-语言概述"><a href="#Java-语言概述" class="headerlink" title="Java 语言概述"></a>Java 语言概述</h2><h3 id="Java-语言的特性"><a href="#Java-语言的特性" class="headerlink" title="Java 语言的特性"></a>Java 语言的特性</h3><ul>
+<li>面向对象性</li>
+<li>健壮性</li>
+<li>跨平台性</li>
+<li>自动垃圾回收机制</li>
+</ul>
+<h3 id="安装-JDK-配置环境变量"><a href="#安装-JDK-配置环境变量" class="headerlink" title="安装 JDK 配置环境变量"></a>安装 JDK 配置环境变量</h3><p>PATH 是操作系统用于查找来自命令行或终端窗口的必需可执行文件的系统变量<br>PATH 系统变量可使用控制面板中的“系统”实用程序设置（在 Windows 上），或在 shell 的启动文件内设置（在 Linux 和 Solaris 上）<br>运行 Windows 或 Mac OS X 的计算机通常不需要更改系统 PATH 变量</p>
+<h4 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h4><ol>
+<li>在桌面上右键单击计算机图标</li>
+<li>从上下文菜单中选择属性</li>
+<li>单击高级系统设置链接</li>
+<li>单击环境变量。在系统变量中，设置3项属性，JAVA_HOME, PATH, CLASSPATH(不区分大小写),若已存在则点击编辑，不存在则点击新建</li>
+<li>JAVA_HOME 指明 JDK 安装路径，就是刚才安装时所选择的路径（例 D:/java/jdk1.8.0_101），此路径下包括 lib，bin，jre 等文件夹（此变量最好设置，因为以后运行 tomcat，eclipse 等都需要依赖此变量）</li>
+<li>Path使得系统可以在任何路径下识别java命令，设为 %JAVA_HOME%/bin;%JAVA_HOME%/jre/bin</li>
+<li>CLASSPATH 为 java 加载类(class or lib)路径，只有类在 CLASSPATH 中，java命令才能识别，设为 .;%JAVA_HOME%/lib/dt.jar;%JAVA_HOME%/lib/tools.jar (要加 . 表示当前路径)</li>
+<li>再次打开命令提示符窗口，输入 java -version, java, javac 出现结果证明配置成功 </li>
+</ol>
+<h4 id="Mac-OS-X"><a href="#Mac-OS-X" class="headerlink" title="Mac OS X"></a>Mac OS X</h4><ul>
+<li>要运行不同版本的 Java，请指定完整路径，或者使用 java_home 工具：<ul>
+<li>% /usr/libexec/java_home -v 1.8.0_73 –exec javac -version</li>
+</ul>
+</li>
+</ul>
+<h3 id="Java-中-JDK-JRE-和-JVM-之间的关系"><a href="#Java-中-JDK-JRE-和-JVM-之间的关系" class="headerlink" title="Java 中 JDK, JRE 和 JVM 之间的关系"></a>Java 中 JDK, JRE 和 JVM 之间的关系</h3><p><img src="http://i.imgur.com/eilgeWO.png" alt=""></p>
+<h4 id="Java-开发工具包（JDK）"><a href="#Java-开发工具包（JDK）" class="headerlink" title="Java 开发工具包（JDK）"></a>Java 开发工具包（JDK）</h4><p>Java 开发工具包是 Java 环境的核心组件，并提供编译、调试和运行一个 Java 程序所需的所有工具，可执行文件和二进制文件。JDK 是一个平台特定的软件，有针对 Windows，Mac 和 Unix 系统的不同的安装包。</p>
+<h4 id="Java-虚拟机（JVM）"><a href="#Java-虚拟机（JVM）" class="headerlink" title="Java 虚拟机（JVM）"></a>Java 虚拟机（JVM）</h4><p>JVM 是 Java 编程语言的核心。当我们运行一个程序时，JVM 负责将字节码转换为特定机器代码。JVM 也是平台特定的，并提供核心的 Java 方法，例如内存管理、垃圾回收和安全机制等。JVM 是可定制化的，我们可以通过 Java 选项(java options)定制它，比如配置 JVM 内存的上下界。JVM 之所以被称为虚拟是因为它提供了一个不依赖于底层操作系统和机器硬件的接口。这种独立于硬件和操作系统的特性正是 Java 程序可以一次编写多处执行的原因。</p>
+<h4 id="Java-运行时环境（JRE）"><a href="#Java-运行时环境（JRE）" class="headerlink" title="Java 运行时环境（JRE）"></a>Java 运行时环境（JRE）</h4><p>JRE 是 JVM 的实施实现，它提供了运行 Java 程序的平台。JRE 包含了 JVM、Java 二进制文件和其它成功执行程序的类文件。JRE 不包含任何像 Java 编译器、调试器之类的开发工具。如果你只是想要执行 Java 程序，你只需安装 JRE 即可，没有安装 JDK 的必要。</p>
+<h4 id="JDK-JRE-和-JVM-之间的区别"><a href="#JDK-JRE-和-JVM-之间的区别" class="headerlink" title="JDK, JRE 和 JVM 之间的区别"></a>JDK, JRE 和 JVM 之间的区别</h4><ul>
+<li>JDK 是用于开发的而 JRE 是用于运行 Java 程序的。</li>
+<li>JDK 和 JRE 都包含了 JVM，从而使得我们可以运行 Java 程序。</li>
+<li>JVM 是 Java 编程语言的核心并且具有平台独立性。</li>
+</ul>
+<h4 id="即时编译器-JIT"><a href="#即时编译器-JIT" class="headerlink" title="即时编译器(JIT)"></a>即时编译器(JIT)</h4><p>JIT 是 JVM 的一部分，通常通过 javac 将程序源代码编译，转换成 java 字节码，JVM 通过解释字节码将其翻译成对应的机器指令，逐条读入，逐条解释翻译。很显然，经过解释执行，其执行速度必然会比可执行的二进制字节码程序慢很多。为了提高执行速度，引入了 JIT 技术。</p>
+<h3 id="垃圾收集器"><a href="#垃圾收集器" class="headerlink" title="垃圾收集器"></a>垃圾收集器</h3><p>Java 平台不会强制时刻关注内存分配（或使用第三方库来完成此工作），它提供了开箱即用的内存管理功能。当 Java 应用程序在运行时创建一个对象实例，JVM 会自动从堆中为该对象分配内存空间，堆是一个专门留给程序使用的内存池。Java 垃圾收集器在后台运行，跟踪记录应用程序不再需要哪些对象并从它们回收内存。这种内存处理方法称为隐式内存管理，因为它不需要编写任何内存处理代码。垃圾收集是 Java 平台性能的基本特征之一。</p>
+<h3 id="关键字、保留字和标识符"><a href="#关键字、保留字和标识符" class="headerlink" title="关键字、保留字和标识符"></a>关键字、保留字和标识符</h3><p>关键字是被 Java 语言赋予了特殊含义，用做专门用途的字符串（单词）。保留字也是被 Java 语言赋予了特殊含义但是没有实际应用（不能使用）。凡是自己可以起名字的地方都叫标识符。<br><img src="http://i.imgur.com/1f3uuYN.png" alt=""><br><img src="http://i.imgur.com/SQzzZa0.png" alt=""></p>
+<h3 id="命名规则（一定要遵守，不遵守就会报编译的错误）"><a href="#命名规则（一定要遵守，不遵守就会报编译的错误）" class="headerlink" title="命名规则（一定要遵守，不遵守就会报编译的错误）"></a>命名规则（一定要遵守，不遵守就会报编译的错误）</h3><ul>
+<li>由26个英文字母大小写，0-9 ，_或 $ 组成</li>
+<li>数字不可以开头</li>
+<li>不可以使用关键字和保留字，但能包含关键字和保留字</li>
+<li>Java中严格区分大小写，长度无限制</li>
+<li>标识符不能包含空格</li>
+</ul>
+<h3 id="良好的命名规范（不遵守，也不会出现编译的错误）"><a href="#良好的命名规范（不遵守，也不会出现编译的错误）" class="headerlink" title="良好的命名规范（不遵守，也不会出现编译的错误）"></a>良好的命名规范（不遵守，也不会出现编译的错误）</h3><ul>
+<li>包名：多单词组成时所有字母都小写：xxxyyyzzz</li>
+<li>类名、接口名：多单词组成时，所有单词的首字母大写：XxxYyyZzz</li>
+<li>变量名、方法名：多单词组成时，第一个单词首字母小写，第二个单词开始每个单词首字母大写：xxxYyyZzz</li>
+<li>常量名：所有字母都大写。多单词时每个单词用下划线连接：XXX_YYY_ZZZ</li>
+</ul>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>数据类型是程序设计语言描述事物、对象的方法。Java 数据类型分为内置类型和扩展类型两大类。内置类型就是 Java 语言本身提供的基本数据类型，比如，整型数，浮点数，字符，布尔值等等。而扩展类型则是 Java 语言根据基本类型扩展出的其他类型（引用数据类型），Java 要求所有的扩展类型都必须包括在类定义里面，这就是 Java 为什么是面向对象编程语言的原因。虽然不同于纯粹的面向对象语言那样，比如 SmallTalk，Java 保留了基本数据类型，但这主要是为满足Java高效率执行的要求。JRE（Java Runtime Environment）提供了丰富实用的扩展类型供程序员使用，而且通过类的继承机制也可以根据需要自己扩展。</p>
+<p>内置类型也称作基本类型（Primitive Types），是其他类型的基础。所有的其他类型（包括Java核心库和用户自定义类型）都是通过基本类型扩展而来的。<br><img src="http://i.imgur.com/jDYJo0a.png" alt=""></p>
+<h3 id="变量和常量"><a href="#变量和常量" class="headerlink" title="变量和常量"></a>变量和常量</h3><p>####变量<br>在程序设计中，变量是一种存储数据的载体。计算机中的变量是实际存在的数据，与数学方程中抽象的“变量”存在本质区别。变量的数值可以被读取和修改，是所有计算的基础。在程序执行的过程中，在某个范围内其值可以发生改变的。变量定义格式：数据类型 变量名 = 初始化值;Java 语言是强类型语言，对于每一种数据都定义了明确的具体数据类型，在内存总分配了不同大小的内存空间。</p>
+<p>按数据类型分类（共 8 种）：</p>
+<ul>
+<li>整型：byte、short、int（默认）、long</li>
+<li>浮点型：float、double（默认）</li>
+<li>字符型：char</li>
+<li>布尔型：booble</li>
+</ul>
+<p>变量按被声明的位置划分：</p>
+<ul>
+<li>成员变量</li>
+<li>局部变量</li>
+</ul>
+<h4 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h4><p>在程序执行的过程中其值不可以发生改变的永久数据。在Java中用final标志,虽然常量名也可以用小写，但为了便于识别，通常使用大写字母表示常量。<br>示例：<code>final double PI = 3.1415927;</code></p>
+<p>十六进制整型常量：以十六进制表示时，需以0x或0X开头，如0xff,0X9A。<br>八进制整型常量：八进制必须以0开头，如0123，034。<br>长整型：长整型必须以L作结尾，如9L,342L。浮点数常量：由于小数常量的默认类型是 double 型，所以 float 类型的后面一定要加f(F)。同样带小数的变量默认为double类型。如：<code>float f;f = 1.3f;</code> 必须声明f。</p>
+<p>字符常量：字符型常量需用两个单引号括起来（注意字符串常量是用两个双引号括起来）。Java中的字符占两个字节。一些常用的转义字符：</p>
+<ul>
+<li><code>\r</code> 表示接受键盘输入，相当于按下了回车键</li>
+<li><code>\n</code> 表示换行</li>
+<li><code>\t</code> 表示制表符，相当于 Table 键</li>
+<li><code>\b</code> 表示退格键，相当于 Back Space 键</li>
+<li><code>\&#39;</code> 表示单引号</li>
+<li><code>\&#39;&#39;</code> 表示双引号</li>
+<li><code>\\</code> 表示一个斜杠 \</li>
+</ul>
+<h3 id="变量的运算"><a href="#变量的运算" class="headerlink" title="变量的运算"></a>变量的运算</h3><p>简单类型数据间的转换,有两种方式:自动转换和强制转换,通常发生在表达式中或方法的参数传递时。</p>
+<p>自动类型转换:<br>具体地讲,当一个较”小”数据与一个较”大”的数据一起运算时,系统将自动将”小”数据转换成”大”数据,再进行运算。而在方法调用时,实际参数较”小”,而被调用的方法的形式参数数据又是较”大”时(若有匹配的,当然会直接调用匹配的方法),系统也将自动将”小”数据转换成”大”数据,再进行方法的调用,自然,对于多个同名的重载方法,会转换成最”接近”的”大”数据并进行调用。这些类型由”小”到”大”分别为 (byte，short，char) –&gt; int –&gt; long –&gt; float –&gt; double。这里我们所说的”大”与”小”,并不是指占用字节的多少,而是指表示值的范围的大小。</p>
+<ul>
+<li><p>下面的语句可以在 Java 中直接通过:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">byte</span> b;</div><div class="line"><span class="keyword">int</span> i = b; </div><div class="line"><span class="keyword">long</span> l = b; </div><div class="line"><span class="keyword">float</span> f = b; </div><div class="line"><span class="keyword">double</span> d = b;</div></pre></td></tr></table></figure>
+</li>
+<li><p>如果低级类型为 char 型，向高级类型（整型）转换时，会转换为对应 ASCII 码值，例如</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">char</span> c = <span class="string">'c'</span>; </div><div class="line"><span class="keyword">int</span> i = c;</div><div class="line">System.out.println(<span class="string">"output:"</span>+i);	<span class="comment">// 输出：99;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>对于byte,short,char三种类型而言，他们是平级的，因此不能相互自动转换，可以使用下述的强制类型转换。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">short</span> i = <span class="number">99</span>; </div><div class="line"><span class="keyword">char</span> c=(<span class="keyword">char</span>)i; </div><div class="line">System.out.println(<span class="string">"output:"</span>+c);	<span class="comment">// 输出：c;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>强制类型转换：<br>将”大”数据转换为”小”数据时，你可以使用强制类型转换。即你必须采用下面这种语句格式： <code>int i = (int)3.14159/2;</code>可以想象，这种转换肯定可能会导致溢出或精度的下降。</p>
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><p>计算机的最基本用途之一就是执行数学运算，作为一门计算机语言，Java 提供了一套丰富的运算符来操纵变量。我们可以把运算符分成以下几组：</p>
+<ul>
+<li>算术运算符</li>
+<li>关系运算符</li>
+<li>位运算符</li>
+<li>逻辑运算符</li>
+<li>赋值运算符</li>
+<li>其他运算符</li>
+</ul>
+<h4 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h4><p>算术运算符用在数学表达式中，它们的作用和在数学中的作用一样<br><img src="http://i.imgur.com/nf4fhms.png" alt=""></p>
+<p>示例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</div><div class="line">     <span class="keyword">int</span> a = <span class="number">10</span>;</div><div class="line">     <span class="keyword">int</span> b = <span class="number">20</span>;</div><div class="line">     <span class="keyword">int</span> c = <span class="number">25</span>;</div><div class="line">     <span class="keyword">int</span> d = <span class="number">25</span>;</div><div class="line">     System.out.println(<span class="string">"a + b = "</span> + (a + b) );	<span class="comment">// a + b = 30</span></div><div class="line">     System.out.println(<span class="string">"a - b = "</span> + (a - b) );	<span class="comment">// a - b = -10</span></div><div class="line">     System.out.println(<span class="string">"a * b = "</span> + (a * b) );    <span class="comment">// a * b = 200</span></div><div class="line">     System.out.println(<span class="string">"b / a = "</span> + (b / a) );    <span class="comment">// b / a = 2</span></div><div class="line">     System.out.println(<span class="string">"b % a = "</span> + (b % a) );    <span class="comment">// b % a = 0</span></div><div class="line">     System.out.println(<span class="string">"c % a = "</span> + (c % a) );    <span class="comment">// c % a = 5</span></div><div class="line">     System.out.println(<span class="string">"a++   = "</span> +  (a++) ); 	<span class="comment">// a++   = 10</span></div><div class="line">     System.out.println(<span class="string">"a--   = "</span> +  (a--) );     <span class="comment">// a--   = 11</span></div><div class="line">     <span class="comment">// 查看  d++ 与 ++d 的不同</span></div><div class="line">     System.out.println(<span class="string">"d++   = "</span> +  (d++) );     <span class="comment">// d++   = 25</span></div><div class="line">     System.out.println(<span class="string">"++d   = "</span> +  (++d) );     <span class="comment">// ++d   = 27</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h5 id="自增（-）自减（–）运算符"><a href="#自增（-）自减（–）运算符" class="headerlink" title="自增（++）自减（–）运算符"></a>自增（++）自减（–）运算符</h5><p>自增（++）自减（–）运算符是一种特殊的算术运算符，在算术运算符中需要两个操作数来进行运算，而自增自减运算符是一个操作数。</p>
+<ul>
+<li>前缀自增自减法(++a,–a): 先进行自增或者自减运算，再进行表达式运算。</li>
+<li>后缀自增自减法(a++,a–): 先进行表达式运算，再进行自增或者自减运算 </li>
+</ul>
+<p>在不进行赋值的操作下前缀自增自减法和后缀自增自减法没有区别，区别只发生在赋值操作下。</p>
+<p>示例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">selfAddMinus</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</div><div class="line">        <span class="keyword">int</span> a = <span class="number">5</span>;<span class="comment">//定义一个变量；</span></div><div class="line">        <span class="keyword">int</span> b = <span class="number">5</span>;</div><div class="line">        <span class="keyword">int</span> x = <span class="number">2</span>*++a;</div><div class="line">        <span class="keyword">int</span> y = <span class="number">2</span>*b++;</div><div class="line">        System.out.println(<span class="string">"自增运算符前缀运算后"</span>+a+<span class="string">",x="</span>+x);  <span class="comment">// a=6，x=12</span></div><div class="line">        System.out.println(<span class="string">"自增运算符后缀运算后b="</span>+b+<span class="string">",y="</span>+y);<span class="comment">// b=6，y=10</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h4><p>下表为 Java 支持的关系运算符,表格中的实例整数变量A的值为10，变量B的值为20：<br><img src="http://i.imgur.com/Ii3KCr2.png" alt=""></p>
+<p>示例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</div><div class="line">     <span class="keyword">int</span> a = <span class="number">10</span>;</div><div class="line">     <span class="keyword">int</span> b = <span class="number">20</span>;</div><div class="line">     System.out.println(<span class="string">"a == b = "</span> + (a == b) );	<span class="comment">// a == b = false</span></div><div class="line">     System.out.println(<span class="string">"a != b = "</span> + (a != b) );	<span class="comment">// a != b = true</span></div><div class="line">     System.out.println(<span class="string">"a &gt; b = "</span> + (a &gt; b) );	  <span class="comment">// a &gt; b = false</span></div><div class="line">     System.out.println(<span class="string">"a &lt; b = "</span> + (a &lt; b) );	  <span class="comment">// a &lt; b = true</span></div><div class="line">     System.out.println(<span class="string">"b &gt;= a = "</span> + (b &gt;= a) );	<span class="comment">// b &gt;= a = true</span></div><div class="line">     System.out.println(<span class="string">"b &lt;= a = "</span> + (b &lt;= a) );	<span class="comment">// b &lt;= a = false</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h4><p>Java定义了位运算符，应用于整数类型(int)，长整型(long)，短整型(short)，字符型(char)，和字节型(byte)等类型。位运算符作用在所有的位上，并且按位运算。假设 a = 60，b = 13;它们的二进制格式表示将如下：<br><img src="http://i.imgur.com/HxQytZm.png" alt=""></p>
+<p>下表列出了位运算符的基本运算,假设整数变量A的值为60和变量B的值为13：<br><img src="http://i.imgur.com/iC3MXwg.png" alt=""></p>
+<p>示例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</div><div class="line">     <span class="keyword">int</span> a = <span class="number">60</span>; <span class="comment">/* 60 = 0011 1100 */</span> </div><div class="line">     <span class="keyword">int</span> b = <span class="number">13</span>; <span class="comment">/* 13 = 0000 1101 */</span></div><div class="line">     <span class="keyword">int</span> c = <span class="number">0</span>;</div><div class="line">     c = a &amp; b;       <span class="comment">/* 12 = 0000 1100 */</span></div><div class="line">     System.out.println(<span class="string">"a &amp; b = "</span> + c );		<span class="comment">// a &amp; b = 12</span></div><div class="line"></div><div class="line">     c = a | b;       <span class="comment">/* 61 = 0011 1101 */</span></div><div class="line">     System.out.println(<span class="string">"a | b = "</span> + c );		<span class="comment">// a | b = 61</span></div><div class="line"></div><div class="line">     c = a ^ b;       <span class="comment">/* 49 = 0011 0001 */</span></div><div class="line">     System.out.println(<span class="string">"a ^ b = "</span> + c );		<span class="comment">// a ^ b = 49</span></div><div class="line"></div><div class="line">     c = ~a;          <span class="comment">/*-61 = 1100 0011 */</span></div><div class="line">     System.out.println(<span class="string">"~a = "</span> + c );           <span class="comment">//  ~a = -61</span></div><div class="line"></div><div class="line">     c = a &lt;&lt; <span class="number">2</span>;     <span class="comment">/* 240 = 1111 0000 */</span></div><div class="line">     System.out.println(<span class="string">"a &lt;&lt; 2 = "</span> + c );       <span class="comment">// a &lt;&lt; 2 = 240</span></div><div class="line"></div><div class="line">     c = a &gt;&gt; <span class="number">2</span>;     <span class="comment">/* 15 = 1111 */</span></div><div class="line">     System.out.println(<span class="string">"a &gt;&gt; 2  = "</span> + c );      <span class="comment">// a &gt;&gt; 15</span></div><div class="line">  </div><div class="line">     c = a &gt;&gt;&gt; <span class="number">2</span>;     <span class="comment">/* 15 = 0000 1111 */</span></div><div class="line">     System.out.println(<span class="string">"a &gt;&gt;&gt; 2 = "</span> + c );      <span class="comment">// a &gt;&gt;&gt; 15</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h4><p>下表列出了逻辑运算符的基本运算，假设布尔变量 A 为真，变量 B 为假<br><img src="http://i.imgur.com/oWsaixl.png" alt=""></p>
+<p>示例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span> </span>&#123;</div><div class="line">        System.out.println(a &amp;&amp; b);		<span class="comment">// false</span></div><div class="line">		System.out.println(a || b);		<span class="comment">// true</span></div><div class="line">		System.out.println(!(a &amp;&amp; b));	 <span class="comment">// true</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h4><p><img src="http://i.imgur.com/JbLNunh.png" alt=""></p>
+<p>示例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</div><div class="line">     <span class="keyword">int</span> a = <span class="number">10</span>;</div><div class="line">     <span class="keyword">int</span> b = <span class="number">20</span>;</div><div class="line">     <span class="keyword">int</span> c = <span class="number">0</span>;</div><div class="line">     c = a + b;</div><div class="line">     System.out.println(<span class="string">"c = a + b = "</span> + c );	<span class="comment">// c = a + b = 30</span></div><div class="line">     c += a ;</div><div class="line">     System.out.println(<span class="string">"c += a  = "</span> + c );	  <span class="comment">// c += a  = 40</span></div><div class="line">     c -= a ;</div><div class="line">     System.out.println(<span class="string">"c -= a = "</span> + c );       <span class="comment">// c -= a = 30</span></div><div class="line">     c *= a ;</div><div class="line">     System.out.println(<span class="string">"c *= a = "</span> + c );       <span class="comment">// c *= a = 300</span></div><div class="line">     a = <span class="number">10</span>;</div><div class="line">     c = <span class="number">15</span>;</div><div class="line">     c /= a ;</div><div class="line">     System.out.println(<span class="string">"c /= a = "</span> + c );       <span class="comment">// c /= a = 1</span></div><div class="line">     a = <span class="number">10</span>;</div><div class="line">     c = <span class="number">15</span>;</div><div class="line">     c %= a ;</div><div class="line">     System.out.println(<span class="string">"c %= a  = "</span> + c );      <span class="comment">// c %= a  = 5</span></div><div class="line">     c &lt;&lt;= <span class="number">2</span> ;</div><div class="line">     System.out.println(<span class="string">"c &lt;&lt;= 2 = "</span> + c );      <span class="comment">// c &lt;&lt;= 2 = 20</span></div><div class="line">     c &gt;&gt;= <span class="number">2</span> ;</div><div class="line">     System.out.println(<span class="string">"c &gt;&gt;= 2 = "</span> + c );      <span class="comment">// c &gt;&gt;= 2 = 5</span></div><div class="line">     c &gt;&gt;= <span class="number">2</span> ;</div><div class="line">     System.out.println(<span class="string">"c &gt;&gt;= a = "</span> + c );      <span class="comment">// c &gt;&gt;= 2 = 1</span></div><div class="line">     c &amp;= a ;</div><div class="line">     System.out.println(<span class="string">"c &amp;= 2  = "</span> + c );      <span class="comment">// c &amp;= a  = 0</span></div><div class="line">     c ^= a ;</div><div class="line">     System.out.println(<span class="string">"c ^= a   = "</span> + c );     <span class="comment">// c ^= a   = 10</span></div><div class="line">     c |= a ;</div><div class="line">     System.out.println(<span class="string">"c |= a   = "</span> + c );     <span class="comment">// c |= a   = 10</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="条件运算符（-）"><a href="#条件运算符（-）" class="headerlink" title="条件运算符（?:）"></a>条件运算符（?:）</h4><p>条件运算符也被称为三元运算符。该运算符有3个操作数，并且需要判断布尔表达式的值。该运算符的主要是决定哪个值应该赋值给变量。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/wechat-reward.png" alt="程前 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/alipay-reward.jpg" alt="程前 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag">#Java</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/28/note_js/" rel="next" title="JavaScript">
+                <i class="fa fa-chevron-left"></i> JavaScript
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/10/31/JavaSE 知识点总结/"
+     data-title="Java 知识点总结"
+     data-content=""
+     data-url="http://yoursite.com/2016/10/31/JavaSE 知识点总结/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/10/31/JavaSE 知识点总结/"
+           data-title="Java 知识点总结" data-url="http://yoursite.com/2016/10/31/JavaSE 知识点总结/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="程前" />
+          <p class="site-author-name" itemprop="name">程前</p>
+          <p class="site-description motion-element" itemprop="description">人生就像骑单车。想保持平衡就得往前走</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/chn-chengqian" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-语言概述"><span class="nav-number">1.</span> <span class="nav-text">Java 语言概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-语言的特性"><span class="nav-number">1.1.</span> <span class="nav-text">Java 语言的特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-JDK-配置环境变量"><span class="nav-number">1.2.</span> <span class="nav-text">安装 JDK 配置环境变量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Windows"><span class="nav-number">1.2.1.</span> <span class="nav-text">Windows</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mac-OS-X"><span class="nav-number">1.2.2.</span> <span class="nav-text">Mac OS X</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-中-JDK-JRE-和-JVM-之间的关系"><span class="nav-number">1.3.</span> <span class="nav-text">Java 中 JDK, JRE 和 JVM 之间的关系</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Java-开发工具包（JDK）"><span class="nav-number">1.3.1.</span> <span class="nav-text">Java 开发工具包（JDK）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java-虚拟机（JVM）"><span class="nav-number">1.3.2.</span> <span class="nav-text">Java 虚拟机（JVM）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java-运行时环境（JRE）"><span class="nav-number">1.3.3.</span> <span class="nav-text">Java 运行时环境（JRE）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JDK-JRE-和-JVM-之间的区别"><span class="nav-number">1.3.4.</span> <span class="nav-text">JDK, JRE 和 JVM 之间的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#即时编译器-JIT"><span class="nav-number">1.3.5.</span> <span class="nav-text">即时编译器(JIT)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#垃圾收集器"><span class="nav-number">1.4.</span> <span class="nav-text">垃圾收集器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关键字、保留字和标识符"><span class="nav-number">1.5.</span> <span class="nav-text">关键字、保留字和标识符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命名规则（一定要遵守，不遵守就会报编译的错误）"><span class="nav-number">1.6.</span> <span class="nav-text">命名规则（一定要遵守，不遵守就会报编译的错误）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#良好的命名规范（不遵守，也不会出现编译的错误）"><span class="nav-number">1.7.</span> <span class="nav-text">良好的命名规范（不遵守，也不会出现编译的错误）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据类型"><span class="nav-number">1.8.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量和常量"><span class="nav-number">1.9.</span> <span class="nav-text">变量和常量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#常量"><span class="nav-number">1.9.1.</span> <span class="nav-text">常量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量的运算"><span class="nav-number">1.10.</span> <span class="nav-text">变量的运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运算符"><span class="nav-number">1.11.</span> <span class="nav-text">运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#算术运算符"><span class="nav-number">1.11.1.</span> <span class="nav-text">算术运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#自增（-）自减（–）运算符"><span class="nav-number">1.11.1.1.</span> <span class="nav-text">自增（++）自减（–）运算符</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关系运算符"><span class="nav-number">1.11.2.</span> <span class="nav-text">关系运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#位运算符"><span class="nav-number">1.11.3.</span> <span class="nav-text">位运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#逻辑运算符"><span class="nav-number">1.11.4.</span> <span class="nav-text">逻辑运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#赋值运算符"><span class="nav-number">1.11.5.</span> <span class="nav-text">赋值运算符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#条件运算符（-）"><span class="nav-number">1.11.6.</span> <span class="nav-text">条件运算符（?:）</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">程前</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"chn-chengqian"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("5tDlbbtKO8vCn7ndnBYqiv3X-gzGzoHsz", "hyAmnzBOArxjFYJCvQsnqELS");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+
+</body>
+</html>
